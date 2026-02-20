@@ -1,9 +1,9 @@
-# tpl-repo-go
+# go-tpl-repo
 
 This repository serves as a standardized template for all future GitHub GO projects within the organization.  
 
 ----
-[![Main CI](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci.yaml)
+[![Main CI](https://github.com/abtransitionit/go-tpl-repo/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/go-tpl-repo/actions/workflows/ci.yaml)
 [![LICENSE](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
 
 ----
@@ -25,46 +25,86 @@ This repository includes the following standard governance and documentation com
 
 # Getting Started  
 
-## Create a repository from this template (e.g. `mygoprj`)
+## Create a repository from this template (e.g. `go-prjname`)
 **Step 1. create and clone**
 
-- on `github.com` create `mygoprj` : an empty git repo without `README` and `.gitcore`
-- git clone the tpl repo: `tpl-repo-go` into `mygoprj`
+- on `github.com` create `go-prjname` : an empty git repo without `README` and `.gitcore`
+- **locally**, git clone the template for `GO` projects:
 ```shell
-git clone https://github.com/abtransitionit/tpl-repo-go.git mygoprj
+git clone https://github.com/abtransitionit/go-tpl-repo.git go-prjname
 ```
 - reset history and init repo
 ```shell
-cd mygoprj
+cd go-prjname
 rm -rf .git
 git init -b main  
 ```
 - update `GO` path and version in the file `go.mod`
 ```shell
 # do update
-go mod init github.com/abtransitionit/mygoprj
-go 1.24.2
+go mod init github.com/abtransitionit/go-prjname
+go 1.26
 # check update
 cat go.mod
 ```
 
+**Step 2. Update the config**
+
 - update the following files if necessary:
   - `.git/config`
+    ```shell
+    git remote add origin https://github.com/abtransitionit/go-prjname.git
+    ```
   - `.gitignore`
+  - `.CGHANGELOG.md`
 
-- commit the code "initial setup from template"
-```shell
-git remote add origin https://github.com/abtransitionit/mygoprj.git
+
+**Step 3. Update the README**
+
+- update `tpl-repo-go` to `mygoprj`
+- review each sections and update/add content to match the repo purpose
+
+**Step 4. test the code**
 ```
-- push the code
+go mod tidy
+go vet ./...
+go build ./...
+```
+
+**Step 5. Commit the code**
+
+- 
+```
+git add .
+git commit -m "initial setup from template go-tpl-repo"
+```
+
+**Step 6. push the code**
+
+- 
 ```shell
 git push -u origin main
 ```
 
-**Step 2. Update the README**
 
-- update `tpl-repo-go` to `mygoprj`
+**Step 7. Update the README**
+
+- update `go-tpl-repo` to `go-prjname`
 - review each sections and update/add content when needed
+
+**Step 8. test the changes**
+
+```shell
+git push -u origin main
+```
+
+**Step 9. push the code**
+
+```shell
+git push -u origin main
+```
+
+see the `CI` in action on github .
 
 # Continuous Integration
 
