@@ -1,3 +1,3 @@
-module github.com/abtransitionit/gotplrepo
+module github.com/abtransitionit/go-app-test
 
-go 1.24.2
+go 1.26
