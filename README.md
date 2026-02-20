@@ -18,6 +18,7 @@ This repository includes the following standard governance and documentation com
 | [Code of Conduct](.github/CODE_OF_CONDUCT.md) | A community standards for all participants. |
 | [Contributing Guide](.github/CONTRIBUTING.md) | Explains how to contribute, including reporting issues, submitting pull requests, and development workflow. |
 | Continuous Integration | Automated build, vet, and test executed on each push and pull request. |
+| CHANGELOG | Tracks project changes across versions. |
 | README | This document. Provides project overview, purpose, structure, and onboarding information for users and contributors. |
 
 
