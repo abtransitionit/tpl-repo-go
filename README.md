@@ -1,4 +1,4 @@
-# gotplrepo
+# tpl-repo-go
 
 This repository serves as a standardized template for all future GitHub GO projects within the organization.  
 
@@ -7,73 +7,55 @@ This repository serves as a standardized template for all future GitHub GO proje
 ----
 
 
-# Features  
-This project template includes the following components:  
+# Repository Contribution & Governance
 
+This repository includes the following standard governance and documentation components:
 
-|Component|Description|
-|-|-|
-|Licensing|Predefined open-source license (Apache 2.0) for legal compliance.|
-|Code of Conduct| Ensures a welcoming and inclusive environment for all contributors.|  
-|README|Structured documentation template for clear project onboarding.|  
+| Component | Description |
+| - | - |
+| Licensing | Predefined open-source license. |
+| [Code of Conduct](.github/CODE_OF_CONDUCT.md) | A community standards for all participants. |
+| [Contributing Guide](.github/CONTRIBUTING.md) | Explains how to contribute, including reporting issues, submitting pull requests, and development workflow. |
+| README | This document. Provides project overview, purpose, structure, and onboarding information for users and contributors. |
 
-
-
----
 
 # Getting Started  
 
-## 1. Create a repository from this template (e.g. `gomine`)
-- on `github.com` create `gomine` : an empty git repo without `README` and `.gitcore`
-- git clone the tpl repo: `gotplrepo` into `gomine`
+## Create a repository from this template (e.g. `mygoprj`)
+**Step 1. create and clone**
+
+- on `github.com` create `mygoprj` : an empty git repo without `README` and `.gitcore`
+- git clone the tpl repo: `tpl-repo-go` into `mygoprj`
 ```shell
-git clone https://github.com/abtransitionit/gotplrepo.git gomine
+git clone https://github.com/abtransitionit/tpl-repo-go.git mygoprj
 ```
 - reset history and init repo
 ```shell
-cd gomine
+cd mygoprj
 rm -rf .git
 git init -b main  
 ```
 - update `GO` path in the file `go.mod`
 ```shell
 # do update
-go mod init github.com/abtransitionit/gomine
+go mod init github.com/abtransitionit/mygoprj
 # check updtae
 cat go.mod
 ```
 - commit the code "initial setup from template"
 - update .git/config
+- update .gitignore
 ```shell
-git remote add origin https://github.com/abtransitionit/gomine.git
+git remote add origin https://github.com/abtransitionit/mygoprj.git
 ```
 - push the code
 ```shell
 git push -u origin main
 ```
 
-## 2. Update the README
-- update `gotplrepo` to `gomine`
+**Step 2. Update the README**
+
+- update `tpl-repo-go` to `mygoprj`
 - review each sections and update/add content when needed
 
-
----
-
-# Contributing  
-
-We welcome contributions! Before participating, please review:  
-- **[Code of Conduct](.github/CODE_OF_CONDUCT.md)** – Our community guidelines.  
-- **[Contributing Guide](.github/CONTRIBUTING.md)** – How to submit issues, PRs, and more.  
-
-
-----
-
-
-# Release History & Changelog  
-
-Track version updates and changes:  
-- **📦 Latest Release**: `vX.X.X` ([GitHub Releases](#))  
-- **📄 Full Changelog**: See [CHANGELOG.md](CHANGELOG.md) for detailed version history.  
-
----
 
