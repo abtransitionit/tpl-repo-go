@@ -1,7 +1,8 @@
 # tpl-repo-go
 
 This repository serves as a standardized template for all future GitHub GO projects within the organization.  
-
+----
+[![Main CI](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci-main.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci-main.yaml)
 [![LICENSE](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
 
 ----
@@ -16,6 +17,7 @@ This repository includes the following standard governance and documentation com
 | Licensing | Predefined open-source license. |
 | [Code of Conduct](.github/CODE_OF_CONDUCT.md) | A community standards for all participants. |
 | [Contributing Guide](.github/CONTRIBUTING.md) | Explains how to contribute, including reporting issues, submitting pull requests, and development workflow. |
+| Continuous Integration | Automated build, vet, and test executed on each push and pull request. |
 | README | This document. Provides project overview, purpose, structure, and onboarding information for users and contributors. |
 
 
