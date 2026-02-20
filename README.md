@@ -1,6 +1,7 @@
 # tpl-repo-go
 
 This repository serves as a standardized template for all future GitHub GO projects within the organization.  
+
 ----
 [![Main CI](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/tpl-repo-go/actions/workflows/ci.yaml)
 [![LICENSE](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
