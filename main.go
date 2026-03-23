@@ -3,12 +3,11 @@ package main
 import (
 	"log"
 
-	// "github.com/abtransitionit/go-app-test/lsd"
-	"github.com/abtransitionit/go-app-test/logx"
+	"github.com/abtransitionit/go-app-test/file"
 )
 
 func main() {
-	if err := logx.Get(); err != nil {
+	if err := file.Write(); err != nil {
 		log.Fatalf("runtime error: %v", err)
 	}
 }

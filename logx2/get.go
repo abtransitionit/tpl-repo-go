@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/abtransitionit/go-log/logx"
+	"github.com/abtransitionit/go-log/sfield"
 )
 
 func Get() error {
@@ -29,7 +30,7 @@ func Get() error {
 
 	logger.Error("disk full")
 	logger.Warnf("memory usage at %d%%", 92)
-	logger.Debugsf("debug data", logx.String("debug", "xyz"))
+	logger.Debugsf("debug data", sfield.String("debug", "xyz"))
 
 	// use it
 	logger.Info("server started")
