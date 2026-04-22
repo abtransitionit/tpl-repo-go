@@ -13,7 +13,7 @@ This repository serves as a standardized template for all future GitHub GO APP p
 
 # [↑][Top] Repository Contribution & Governance
 
-<details open><summary>Show</summary>
+<details open><summary>[Show]</summary>
 
 
 This repository includes the following standard governance and documentation components:
@@ -34,7 +34,7 @@ This repository includes the following standard governance and documentation com
 
 # [↑][Top] Getting Started  
 
-<details open><summary>Show</summary>
+<details open><summary>[Show]</summary>
 
 
 ## Create a repository from this template (e.g. `go-prjname`)
@@ -135,7 +135,7 @@ see the `CI` in action on github .
 
 
 
-<details open><summary>Show</summary>
+<details open><summary>[Show]</summary>
 
 This repository uses GitHub Actions (Workflow file: `.github/workflows/ci.yaml`) for automated tasks and quality control.
 
