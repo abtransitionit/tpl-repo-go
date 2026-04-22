@@ -1,0 +1,59 @@
+package host
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/abtransitionit/go-host/host"
+	"github.com/abtransitionit/go-log/iface"
+)
+
+var (
+	cmd = "ls -ial /tmp/; id; pwd"
+)
+
+func RunRemote(ctx context.Context, logger iface.Logger) error {
+	// check it is called
+	fmt.Println("starting code")
+
+	// get resource operator
+	resourceOperator, err := host.NewRunner("rvm://o1u", logger)
+	if err != nil {
+		return err
+	}
+
+	// operate on resource via instance
+	cmdOutput, err := resourceOperator.Run(ctx, cmd)
+	if err != nil {
+		return err
+	}
+
+	// process data
+	fmt.Println(string(cmdOutput))
+
+	// success
+	return nil
+}
+
+func RunLocal(ctx context.Context, logger iface.Logger) error {
+	// check it is called
+	fmt.Println("starting code")
+
+	// get resource operator
+	r, err := host.NewRunner("local://", logger)
+	if err != nil {
+		return err
+	}
+
+	// operate on resource via instance
+	out, err := r.Run(ctx, cmd)
+	if err != nil {
+		return err
+	}
+
+	// process data
+	fmt.Println(string(out))
+
+	// success
+	return nil
+}

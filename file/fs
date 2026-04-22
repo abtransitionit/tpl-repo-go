@@ -1,0 +1,75 @@
+package file
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/abtransitionit/go-file/file"
+	"github.com/abtransitionit/go-log/iface"
+)
+
+var (
+	resourceLocation = "/tmp/mx.txt"
+	resourceUri      = fmt.Sprintf("file://%s", resourceLocation)
+	data             = []byte("hello world")
+)
+
+func Write(ctx context.Context, logger iface.Logger) error {
+	// check it is called
+	fmt.Println("starting code")
+
+	// operate on resource via instance
+	fileOperator, err := file.NewWriter(resourceUri, logger)
+	if err != nil {
+		panic(err)
+	}
+
+	// operate on resource via instance
+	err = fileOperator.Write(ctx, data)
+	if err != nil {
+		panic(err)
+	}
+
+	// handle success
+	return nil
+}
+func Read(ctx context.Context, logger iface.Logger) error {
+	// check it is called
+	fmt.Println("starting code")
+
+	// get resource operator
+	fileOperator, err := file.NewReader(resourceUri, logger)
+	if err != nil {
+		panic(err)
+	}
+	// operate on resource via instance
+	data, err = fileOperator.Read(ctx)
+	if err != nil {
+		panic(err)
+	}
+
+	// process data
+	fmt.Println(string(data))
+
+	// handle success
+	return nil
+}
+
+func Delete(ctx context.Context, logger iface.Logger) error {
+	// check it is called
+	fmt.Println("starting code")
+
+	// get resource operator
+	fileOperator, err := file.NewDeleter(resourceUri, logger)
+	if err != nil {
+		panic(err)
+	}
+	// operate on resource via instance
+	err = fileOperator.Delete(ctx)
+	if err != nil {
+		panic(err)
+	}
+
+	// handle success
+	return nil
+}
